@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三個月理財陪跑｜灰哥 理財陪跑教練</title>
+<meta name="description" content="你不是沒錢，你是不知道錢去哪了。三個月後，你會變成「掌握自身財務狀況」的人。第一次諮詢，就讓你的第一筆投資開始扣款。">
+<meta property="og:title" content="三個月理財陪跑｜灰哥 理財陪跑教練">
+<meta property="og:description" content="你不是沒錢，你是不知道錢去哪了。第一次諮詢，就讓你的第一筆投資開始扣款。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://3month.morechoice.net/">
+<meta property="og:locale" content="zh_TW">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- 配色與字體跟 consult.morechoice.net、boardgame.morechoice.net 同一套，改色請三頁一起改 -->
+<style>
+:root{
+  --paper:#F6F3ED;
+  --paper-2:#EFEAE1;
+  --card:#FCFAF6;
+  --ink:#2F2C27;
+  --ink-2:#6E685E;
+  --ink-3:#9A948A;
+  --line:#DFD8CB;
+  --line-soft:#EAE4D9;
+  --moss:#7C8C74;
+  --moss-dark:#5F6E58;
+  --clay:#B08968;
+  --maxw:880px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:"Noto Sans TC",-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+  font-weight:300;line-height:1.9;-webkit-font-smoothing:antialiased;letter-spacing:.02em;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+b,strong{font-weight:500;color:var(--ink)}
+
+/* ---------- 版面 ---------- */
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{padding:88px 0}
+.sec-alt{background:var(--paper-2)}
+.eyebrow{font-size:.75rem;letter-spacing:.28em;color:var(--moss);font-weight:500;margin-bottom:20px}
+h2{font-family:"Noto Serif TC",serif;font-weight:600;font-size:1.65rem;line-height:1.65;letter-spacing:.02em;margin-bottom:16px}
+h3{font-family:"Noto Serif TC",serif;font-weight:600;font-size:1.05rem;line-height:1.7}
+.lede{color:var(--ink-2);font-size:.98rem;margin-bottom:44px;max-width:38em}
+.rule{width:40px;height:1px;background:var(--clay);margin:0 0 28px}
+.hl{background:linear-gradient(transparent 62%,rgba(176,137,104,.28) 0)}
+
+/* ---------- 導覽 ---------- */
+header{
+  position:sticky;top:0;z-index:50;background:rgba(246,243,237,.97);
+  backdrop-filter:saturate(150%) blur(14px);border-bottom:1px solid var(--line-soft);
+}
+.nav{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:"Noto Serif TC",serif;font-weight:600;font-size:1rem;letter-spacing:.06em;white-space:nowrap}
+.brand span{font-family:"Noto Sans TC",sans-serif;font-weight:300;font-size:.72rem;color:var(--ink-3);letter-spacing:.1em;margin-left:8px}
+.btn{
+  display:inline-block;border:1px solid var(--ink);background:var(--ink);color:var(--paper);
+  font-family:"Noto Sans TC",sans-serif;font-size:.86rem;font-weight:500;letter-spacing:.06em;
+  padding:11px 22px;border-radius:2px;text-decoration:none;
+  transition:background .25s,color .25s,border-color .25s;white-space:nowrap;cursor:pointer;
+}
+.btn:hover{background:var(--moss-dark);border-color:var(--moss-dark)}
+.btn-sm{padding:8px 16px;font-size:.8rem}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{background:transparent;color:var(--moss-dark);border-color:var(--moss)}
+
+/* ---------- Hero ---------- */
+.hero{padding:76px 0 68px}
+.hero-grid{display:grid;grid-template-columns:1fr 300px;gap:56px;align-items:center}
+.hero .for{font-family:"Noto Serif TC",serif;color:var(--clay);font-size:.95rem;letter-spacing:.06em;margin-bottom:14px}
+.hero h1{font-family:"Noto Serif TC",serif;font-weight:700;font-size:2.5rem;line-height:1.5;letter-spacing:.01em;margin-bottom:26px}
+.hero h1 em{font-style:normal;position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.1em;height:.42em;background:rgba(176,137,104,.26);z-index:-1}
+.hero p{color:var(--ink-2);font-size:1rem;margin-bottom:14px;max-width:32em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:32px}
+.portrait{position:relative;isolation:isolate}
+.portrait img{border-radius:2px;filter:saturate(.86) contrast(1.02)}
+.portrait::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid var(--line);border-radius:2px;z-index:-1}
+.portrait figcaption{font-size:.74rem;color:var(--ink-3);margin-top:16px;text-align:right;letter-spacing:.08em}
+
+/* ---------- 數字條 ---------- */
+.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--card)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);max-width:var(--maxw);margin:0 auto}
+.stat{padding:30px 20px;text-align:center;border-right:1px solid var(--line-soft)}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:"Noto Serif TC",serif;font-weight:600;font-size:1.7rem;line-height:1.3;color:var(--ink);margin-bottom:6px}
+.stat span{font-size:.76rem;color:var(--ink-3);letter-spacing:.06em;line-height:1.6;display:block}
+
+/* ---------- 痛點 ---------- */
+.pains{display:grid;gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+.pain{background:var(--paper);padding:26px 28px;display:grid;grid-template-columns:30px 1fr;gap:0 14px;align-items:baseline}
+.pain i{font-style:normal;font-family:"Noto Serif TC",serif;color:var(--clay);font-size:.85rem;letter-spacing:.1em}
+.pain p{color:var(--ink-2);font-size:.95rem}
+.pullquote{margin-top:48px;padding:34px 36px;background:var(--card);border-left:2px solid var(--clay);border-radius:2px}
+.pullquote p{font-family:"Noto Serif TC",serif;font-size:1.05rem;line-height:2;color:var(--ink)}
+.pullquote p+p{margin-top:14px}
+.pullquote strong{font-weight:600}
+
+/* ---------- 方法（編號列） ---------- */
+.qs{display:grid;gap:22px}
+.q{display:grid;grid-template-columns:56px 1fr;gap:22px;align-items:start;padding-bottom:22px;border-bottom:1px solid var(--line-soft)}
+.q:last-child{border-bottom:0;padding-bottom:0}
+.q>b{font-family:"Noto Serif TC",serif;font-weight:400;font-size:2rem;color:var(--line);line-height:1}
+.q h3{margin-bottom:6px}
+.q p{font-size:.93rem;color:var(--ink-2)}
+
+/* ---------- 第一次見面 ---------- */
+.panel{background:var(--card);border:1px solid var(--line);border-radius:2px;padding:40px 36px}
+.panel-lead{font-family:"Noto Serif TC",serif;font-weight:600;font-size:1.1rem;line-height:1.85;text-align:center}
+.ask{margin:30px 0 26px;padding:24px 26px;background:var(--paper);border-left:2px solid var(--clay);border-radius:2px;font-family:"Noto Serif TC",serif;font-size:1rem;line-height:2}
+.ask u{text-decoration:none;background:linear-gradient(transparent 62%,rgba(176,137,104,.28) 0)}
+.answer{text-align:center;color:var(--ink-2);font-size:.96rem}
+.answer .big{display:block;font-family:"Noto Serif TC",serif;font-weight:700;font-size:1.8rem;color:var(--ink);margin:8px 0 4px;letter-spacing:.04em}
+.answer .note{font-size:.84rem;color:var(--ink-3)}
+.why{margin-top:34px;padding-top:30px;border-top:1px solid var(--line-soft)}
+.why h3{text-align:center;margin-bottom:16px}
+.why p{font-size:.94rem;color:var(--ink-2);margin-bottom:12px}
+.reassure{background:var(--paper);border-left:2px solid var(--moss);border-radius:2px;padding:20px 24px;margin:18px 0}
+.reassure p{font-size:.94rem;color:var(--ink);line-height:1.95;margin:0}
+.footnote{font-size:.84rem;color:var(--ink-3);margin-top:26px;line-height:1.9}
+
+/* ---------- 三個月動線 ---------- */
+.phase{display:grid;grid-template-columns:56px 1fr;gap:22px;padding:30px 0;border-bottom:1px solid var(--line)}
+.phase:first-child{border-top:1px solid var(--line)}
+.phase>b{font-family:"Noto Serif TC",serif;font-weight:400;font-size:2rem;color:var(--clay);line-height:1}
+.phase .time{font-size:.75rem;letter-spacing:.24em;color:var(--moss);font-weight:500}
+.phase h3{font-size:1.15rem;margin:2px 0 10px}
+.phase ul{list-style:none}
+.phase li{font-size:.93rem;color:var(--ink-2);padding:3px 0 3px 22px;position:relative}
+.phase li::before{content:"—";position:absolute;left:0;color:var(--line)}
+.phase .result{margin-top:14px;background:var(--card);border:1px solid var(--line-soft);border-radius:2px;padding:12px 16px;font-size:.9rem;color:var(--ink-2)}
+.phase .result b{color:var(--moss-dark);margin-right:4px}
+.order-note{margin-top:36px}
+
+/* ---------- 方案內容 ---------- */
+.offers{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.offer{background:var(--card);border:1px solid var(--line);border-radius:2px;padding:28px 26px}
+.offer i{font-style:normal;font-family:"Noto Serif TC",serif;font-size:.78rem;letter-spacing:.2em;color:var(--moss);display:block;margin-bottom:12px}
+.offer h3{margin-bottom:6px}
+.offer p{font-size:.9rem;color:var(--ink-2)}
+
+/* ---------- 見證 ---------- */
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.voice{background:var(--card);border:1px solid var(--line);border-radius:2px;padding:26px 24px 20px;display:flex;flex-direction:column}
+.voice h3{font-size:1.02rem;margin-bottom:12px}
+.voice p{font-size:.88rem;color:var(--ink-2);line-height:1.95;flex:1}
+.voice .who{margin-top:16px;padding-top:12px;border-top:1px solid var(--line-soft);font-size:.78rem;color:var(--ink-3);letter-spacing:.08em}
+.group{display:flex;align-items:center;gap:14px;margin:56px 0 22px;font-size:1rem}
+.group::after{content:"";flex:1;height:1px;background:var(--line)}
+.carousel{
+  display:flex;gap:16px;overflow-x:auto;padding:4px 2px 18px;
+  scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;align-items:flex-start;
+}
+.carousel::-webkit-scrollbar{height:4px}
+.carousel::-webkit-scrollbar-thumb{background:var(--line);border-radius:2px}
+.shot{flex:0 0 72%;max-width:300px;scroll-snap-align:center;border:1px solid var(--line);border-radius:2px;background:var(--card);padding:6px}
+.shot img{width:100%}
+.swipe-hint{text-align:center;font-size:.8rem;color:var(--ink-3);letter-spacing:.1em;margin-top:6px}
+
+/* ---------- 畢業兩件事 ---------- */
+.grad{background:var(--card);border:1px solid var(--line);border-radius:2px;padding:40px 36px}
+.grad-intro{color:var(--ink-2);font-size:.98rem;margin-bottom:28px}
+.grad-item{display:grid;grid-template-columns:56px 1fr;gap:22px;padding:22px 0;border-top:1px solid var(--line-soft)}
+.grad-item>b{font-family:"Noto Serif TC",serif;font-weight:400;font-size:2rem;color:var(--clay);line-height:1}
+.grad-item h3{margin-bottom:6px}
+.grad-item p{font-size:.94rem;color:var(--ink-2)}
+.grad-item p+p{margin-top:8px}
+.grad-item em{font-style:normal;font-weight:500;color:var(--ink)}
+.grad-close{margin-top:10px;padding-top:26px;border-top:1px solid var(--line);font-family:"Noto Serif TC",serif;font-weight:600;font-size:1.2rem;text-align:center;letter-spacing:.06em}
+
+/* ---------- 關於 ---------- */
+.about-photo{position:relative;isolation:isolate;float:left;width:272px;margin:6px 42px 26px 0;shape-outside:margin-box}
+.about-photo img{border-radius:2px;filter:saturate(.86) contrast(1.02)}
+.about-photo::after{content:"";position:absolute;inset:-13px 13px 13px -13px;border:1px solid var(--line);border-radius:2px;z-index:-1}
+.about-list{list-style:none}
+.about-list li{position:relative;padding:0 0 18px 22px;font-size:.96rem;color:var(--ink-2);line-height:1.9}
+.about-list li::before{content:"—";position:absolute;left:0;color:var(--clay)}
+.clear{clear:both}
+
+/* ---------- 不適合 ---------- */
+.nofit{background:transparent;border:1px dashed var(--line);border-radius:2px;padding:10px 28px}
+.nofit-item{display:grid;grid-template-columns:24px 1fr;gap:10px;padding:18px 0;border-bottom:1px solid var(--line-soft)}
+.nofit-item:last-child{border-bottom:0}
+.nofit-item i{font-style:normal;color:var(--ink-3)}
+.nofit-item h3{font-size:1rem;margin-bottom:4px}
+.nofit-item p{font-size:.92rem;color:var(--ink-2)}
+
+/* ---------- 方案與費用 ---------- */
+.price{text-align:center;padding:10px 0 6px}
+.price .label{font-size:.85rem;color:var(--ink-3);letter-spacing:.2em}
+.price .amount{font-family:"Noto Serif TC",serif;font-weight:700;font-size:3rem;line-height:1.3;letter-spacing:.02em}
+.includes{max-width:480px;margin:34px auto 0;background:var(--card);border:1px solid var(--line);border-radius:2px;padding:28px 30px}
+.includes .inc-title{font-size:.75rem;letter-spacing:.28em;color:var(--moss);font-weight:500;margin-bottom:14px;text-align:center}
+.includes ul{list-style:none}
+.includes li{font-size:.94rem;color:var(--ink-2);padding:6px 0 6px 26px;position:relative}
+.includes li::before{
+  content:"";position:absolute;left:2px;top:.95em;width:9px;height:9px;
+  border-left:1px solid var(--moss);border-bottom:1px solid var(--moss);transform:rotate(-45deg);
+}
+.guarantee{max-width:480px;margin:22px auto 0;background:var(--card);border-left:2px solid var(--moss);border-radius:2px;padding:24px 28px;text-align:center}
+.guarantee h3{margin-bottom:8px}
+.guarantee p{font-size:.94rem;color:var(--ink-2)}
+.guarantee .soft{font-size:.84rem;color:var(--ink-3);margin-top:8px}
+.closing-line{margin-top:48px;text-align:center;font-family:"Noto Serif TC",serif;font-weight:600;font-size:1.35rem;line-height:1.8;letter-spacing:.04em}
+
+/* ---------- FAQ ---------- */
+details{border-bottom:1px solid var(--line-soft);padding:4px 0}
+details summary{
+  cursor:pointer;list-style:none;padding:18px 34px 18px 0;position:relative;
+  font-family:"Noto Serif TC",serif;font-weight:500;font-size:.99rem;line-height:1.7;
+  display:flex;gap:14px;align-items:baseline;
+}
+details summary .qn{font-size:.8rem;color:var(--clay);letter-spacing:.1em;flex:none}
+details summary::-webkit-details-marker{display:none}
+details summary::after{
+  content:"";position:absolute;right:6px;top:26px;width:8px;height:8px;
+  border-right:1px solid var(--ink-3);border-bottom:1px solid var(--ink-3);
+  transform:rotate(45deg);transition:transform .25s;
+}
+details[open] summary::after{transform:rotate(-135deg)}
+details .a{padding:0 0 22px 36px;color:var(--ink-2);font-size:.92rem;line-height:2}
+details .a p+p{margin-top:10px}
+
+/* ---------- 頁尾 ---------- */
+footer.site{border-top:1px solid var(--line);padding:44px 0 56px;font-size:.78rem;color:var(--ink-3);line-height:2}
+footer.site .brand{font-size:.92rem;color:var(--ink-2);margin-bottom:14px;display:block}
+footer.site p{max-width:46em}
+
+/* ---------- RWD ---------- */
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .portrait{max-width:260px;margin:0 auto}
+  .portrait figcaption{text-align:center}
+  .about-photo{float:none;width:230px;margin:0 auto 30px}
+  .results{grid-template-columns:1fr}
+  .offers{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  section{padding:64px 0}
+  .wrap{padding:0 20px}
+  .hero{padding:52px 0}
+  .hero h1{font-size:1.85rem;line-height:1.6}
+  h2{font-size:1.35rem}
+  .stats-grid{grid-template-columns:1fr 1fr}
+  .stats .stat{border-bottom:1px solid var(--line-soft)}
+  .stats .stat:nth-child(2n){border-right:0}
+  .stats .stat:nth-child(n+3){border-bottom:0}
+  .brand span{display:none}
+  .nav{padding:12px 20px}
+  .nav .btn{padding:8px 14px;font-size:.78rem}
+  .pain{padding:22px 18px}
+  .pullquote{padding:26px 22px}
+  .panel,.grad{padding:28px 20px}
+  .ask{padding:20px 18px}
+  .q,.phase,.grad-item{grid-template-columns:40px 1fr;gap:14px}
+  .q>b,.phase>b,.grad-item>b{font-size:1.6rem}
+  .nofit{padding:6px 18px}
+  .price .amount{font-size:2.4rem}
+  .closing-line{font-size:1.15rem}
+  details .a{padding-left:0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">灰哥<span>理財陪跑教練</span></div>
+    <a href="#pricing" class="btn btn-sm">方案與費用</a>
+  </div>
+</header>
+
+<!-- ============ 1. 開場 ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">三個月理財陪跑</div>
+      <p class="for">給不確定自己每個月有沒有存到錢的你</p>
+      <h1>你不是沒錢，<br>你是<em>不知道錢去哪了</em>。</h1>
+      <p>三個月後，你不會變成投資高手。<br><strong>你會變成「掌握自身財務狀況」的人。對於財務決定有判斷，有底氣。</strong></p>
+      <p>而且<strong>第一次諮詢，就讓你的第一筆投資開始扣款。</strong></p>
+      <p>你不用再學更多理財知識，<br>只要說出一個「確定做得到」的金額，我們當天就設定好。</p>
+      <div class="hero-cta">
+        <a href="#flow" class="btn">看三個月怎麼進行</a>
+      </div>
+    </div>
+    <figure class="portrait">
+      <img src="about.jpg" alt="灰哥" width="300" height="450">
+      <figcaption>灰哥｜理財陪跑教練</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ 數字條 ============ -->
+<div class="stats">
+  <div class="stats-grid">
+    <div class="stat"><b>50 位</b><span>累計陪跑學員</span></div>
+    <div class="stat"><b>10 年</b><span>投資與資產累積經歷</span></div>
+    <div class="stat"><b>5 位數</b><span>每月被動收入</span></div>
+    <div class="stat"><b>7 年</b><span>百貨零售，從櫃哥做到區經理</span></div>
+  </div>
+</div>
+
+<!-- ============ 2. 痛點 ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">你是不是也這樣</div>
+    <h2>你不是沒錢，你一直有在賺錢，但是</h2>
+    <div class="rule"></div>
+    <div class="pains">
+      <div class="pain"><i>01</i><p>每個月帳單付一付、生活費花一花，月底一看，<b>好像什麼都沒留下</b>。</p></div>
+      <div class="pain"><i>02</i><p><b>說不出自己現在到底有多少資產、欠多少債。</b>存錢也是有一搭沒一搭，有剩就存，沒剩也就算了。</p></div>
+      <div class="pain"><i>03</i><p>你想過要開始投資，可是連「這個月能拿多少出來」都不確定，<b>所以一直沒開始</b>。</p></div>
+      <div class="pain"><i>04</i><p>你查過網路上的教學：六罐子理財法、631 存錢法、先存後花。<b>但執行困難，好像不適合自己。</b></p></div>
+    </div>
+    <div class="pullquote">
+      <p>你缺的不是理財<strong class="hl">「方法」</strong>，<br>而是沒有先梳理自己的財務現況。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. 轉折 ============ -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="eyebrow">我的方法</div>
+    <h2>我的方法叫「先跑再算」</h2>
+    <div class="rule"></div>
+    <p class="lede">以終為始，先開始投資累積資產，接著學習掌握金流</p>
+    <div class="qs">
+      <div class="q"><b>01</b><div><h3>先讓錢動起來</h3><p>不用等一切算清楚，直接開始扣款，$1,000 也能開始。</p></div></div>
+      <div class="q"><b>02</b><div><h3>再把現況攤開</h3><p>用《財務全貌表》看清楚錢流去哪、你手上到底有哪些資源、又有哪些負債？</p></div></div>
+      <div class="q"><b>03</b><div><h3>最後做診斷</h3><p>資產與負債整體體檢，該調整的地方算 before / after 給你看。</p></div></div>
+      <div class="q"><b>04</b><div><h3>三個月裡隨時問</h3><p>LINE 無限次提問，不用等到下一次諮詢。</p></div></div>
+      <div class="q"><b>05</b><div><h3>沒有金融商品要賣你</h3><p>我不賣保單、不賣基金。我就是收諮詢費，依照你的狀況給予客製化建議。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. 第一次見面就設定扣款 ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">第一次諮詢</div>
+    <h2>第一次見面，我們就把扣款設定好</h2>
+    <div class="rule"></div>
+    <div class="panel">
+      <p class="panel-lead">不是回家想想，不是下次再說。<br>是那一個小時裡，就完成。</p>
+      <div class="ask">
+        我只會問你一個問題：<br>
+        「這個月，請你設定一個<u>沒有壓力、確定做得到</u>的金額來扣款——你會設定多少？」
+      </div>
+      <p class="answer">
+        你說多少，我們就設多少。
+        <span class="big">1,000 元也可以</span>
+        <span class="note">那是券商 App 的下限，不是我的下限。</span>
+      </p>
+      <div class="why">
+        <h3>為什麼第一件事是這個？</h3>
+        <p>因為我看過太多人：花了錢上課，上課當下超熱血，回到現實卻什麼都沒發生。</p>
+        <p>原因就是卡在一句話——「我回家盤點一下、算清楚再開始」。</p>
+        <div class="reassure"><p>這就是計畫死掉的地方。<br>在有教練的情況下不行動，回家就更不會行動了。</p></div>
+        <p>所以我們反過來做。這套做法我叫它「<b>先跑再算</b>」——<b>先讓行動發生，再回頭把帳算清楚。</b>當你手上有一筆真的在扣的錢，接下來兩次諮詢才有東西可以調整——而不是又一次紙上談兵。</p>
+      </div>
+    </div>
+    <p class="footnote">📌 為了讓這件事當天就能完成，報名後我會請你先把證券戶開好，並先填一份簡單的行前準備表單，讓我們第一次碰面就能有成果。</p>
+  </div>
+</section>
+
+<!-- ============ 5. 三個月動線 ============ -->
+<section class="sec-alt" id="flow">
+  <div class="wrap">
+    <div class="eyebrow">三個月怎麼走</div>
+    <h2>「先跑再算」的三個月</h2>
+    <div class="rule"></div>
+    <div class="phases">
+      <div class="phase">
+        <b>01</b>
+        <div>
+          <div class="time">第 1 個月</div>
+          <h3>讓它開始</h3>
+          <ul>
+            <li>完成第一筆<b>定期定額設定</b>，當天生效</li>
+            <li>金額由你決定，條件是：<b>確定做得到</b></li>
+            <li>《財務全貌表》使用教學：開始記錄你的收支與資產負債</li>
+          </ul>
+          <div class="result"><b>成果</b>你有一筆真的在扣的投資，而且是你自己決定的金額</div>
+        </div>
+      </div>
+      <div class="phase">
+        <b>02</b>
+        <div>
+          <div class="time">第 2 個月</div>
+          <h3>把錢看清楚</h3>
+          <ul>
+            <li>一起看《財務全貌表》這一個月的紀錄，找出你自己都沒發現的支出</li>
+            <li>排出一份<b>能執行的預算</b>——不要數字漂亮，而是要你真的做得到</li>
+            <li>算出你的<b>緊急預備金目標金額</b></li>
+          </ul>
+          <div class="result"><b>成果</b>你知道每個月的錢流去哪，也知道還要存多少才算安全</div>
+        </div>
+      </div>
+      <div class="phase">
+        <b>03</b>
+        <div>
+          <div class="time">第 3 個月</div>
+          <h3>資產負債診斷</h3>
+          <ul>
+            <li>盤點所有資產與負債（<b>保單也會一起看</b>）</li>
+            <li>哪筆資產有優化空間？哪筆負債該優先處理？算 <b>before / after</b> 給你看</li>
+            <li>檢視扣款金額要不要調整，把三個月的紀錄收成一份完整的財務全貌</li>
+          </ul>
+          <div class="result"><b>成果</b>你第一次看見自己完整的財務樣貌，並且知道下一步該怎麼行動</div>
+        </div>
+      </div>
+    </div>
+    <div class="pullquote order-note">
+      <p>📌「<strong>先跑再算</strong>」的順序是刻意的：<strong class="hl">行為先於分析</strong>。<br>先梳理支出再行動的做法，實際上會卡死在「還沒開始記帳」。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. 服務內容 ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">方案內容</div>
+    <h2>三個月，你會得到什麼</h2>
+    <div class="rule"></div>
+    <div class="offers">
+      <div class="offer"><i>01</i><h3>三次一對一諮詢，每次一小時</h3><p>每月一次，先開始、中調整、後習慣養成</p></div>
+      <div class="offer"><i>02</i><h3>《財務全貌表》</h3><p>帶走能用一輩子的財務儀表板</p></div>
+      <div class="offer"><i>03</i><h3>資產負債診斷</h3><p>資產負債盤點與優化</p></div>
+      <div class="offer"><i>04</i><h3>三個月無限次 LINE 問答</h3><p>不用等到下次諮詢</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. 見證 ============ -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="eyebrow">學員回饋</div>
+    <h2>學員真實回饋</h2>
+    <div class="rule"></div>
+    <p class="lede">以下皆為真實學員回饋，已去識別化處理</p>
+    <div class="results">
+      <div class="voice">
+        <h3>第一次說得出錢在哪</h3>
+        <p>「諮詢之前覺得自己很沒錢，都不知道錢去哪了。現在會更清楚知道自己的狀況，錢都在哪裡、該怎調配」</p>
+        <div class="who">自由接案者</div>
+      </div>
+      <div class="voice">
+        <h3>第 2 次諮詢就還掉房貸</h3>
+        <p>「當初加入的目標第一項就是還掉一般房貸，第二次的諮詢中就協助我運用現有資產達成了。心理壓力突然變小」</p>
+        <div class="who">個人工作室</div>
+      </div>
+      <div class="voice">
+        <h3>從沒信心到有底氣</h3>
+        <p>「很有耐心，講得很詳細，就像跟顧問朋友聊天一樣輕鬆。讓沒信心的理財小白，變成更有底氣去理財」</p>
+        <div class="who">理財小白</div>
+      </div>
+    </div>
+
+    <h3 class="group">他們實際說了什麼</h3>
+    <div class="carousel">
+      <div class="shot"><img src="見證/01.jpg" alt="學員回饋：第二次諮詢就達成還掉房貸的目標" loading="lazy"></div>
+      <div class="shot"><img src="見證/02.jpg" alt="學員回饋：最困難的是面對自己財務狀況的第一步" loading="lazy"></div>
+      <div class="shot"><img src="見證/03.jpg" alt="學員回饋：以前不知道錢去哪了，現在清楚知道自己的狀況" loading="lazy"></div>
+      <div class="shot"><img src="見證/04.jpg" alt="學員回饋：釐清所有資產，用實際數字而不是憑感覺" loading="lazy"></div>
+      <div class="shot"><img src="見證/05.jpg" alt="學員回饋：處理負債與開始存現金後更有踏實感" loading="lazy"></div>
+      <div class="shot"><img src="見證/06.jpg" alt="學員回饋" loading="lazy"></div>
+      <div class="shot"><img src="見證/07.jpg" alt="學員回饋：讓沒信心的理財小白變成更有底氣" loading="lazy"></div>
+      <div class="shot"><img src="見證/08.jpg" alt="學員回饋：逐步達成緊急預備金" loading="lazy"></div>
+      <div class="shot"><img src="見證/09.jpg" alt="學員回饋：小白友善，對觀念建立很有幫助" loading="lazy"></div>
+      <div class="shot"><img src="見證/10.jpg" alt="學員回饋：開始有目標可以動作" loading="lazy"></div>
+    </div>
+    <p class="swipe-hint">← 左右滑動看更多 →</p>
+  </div>
+</section>
+
+<!-- ============ 8. 畢業兩件事 ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">畢業條件</div>
+    <h2>三個月後，你會帶走兩件事</h2>
+    <div class="rule"></div>
+    <div class="grad">
+      <p class="grad-intro">不是只有「上完課」，是<b>你自己有能力做到這兩件事</b>：</p>
+      <div class="grad-item">
+        <b>01</b>
+        <div>
+          <h3>養成定期定額習慣</h3>
+          <p>連續三個月，每個月自動扣。<em>不是靠自律</em>，而是建立「我有投資習慣」的身份認同。</p>
+        </div>
+      </div>
+      <div class="grad-item">
+        <b>02</b>
+        <div>
+          <h3>學會掌握自身財務全貌</h3>
+          <p>知道每個月的錢流去哪、自己的資產負債長什麼樣、緊急預備金該存多少。</p>
+          <p><em>這些能力會陪你一輩子。</em></p>
+        </div>
+      </div>
+      <div class="grad-close">做到這兩件事，你就畢業了。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. About ============ -->
+<section class="sec-alt">
+  <div class="wrap">
+    <div class="eyebrow">關於我</div>
+    <h2>About 灰哥</h2>
+    <div class="rule"></div>
+    <p class="lede">陪你走三個月的理財教練，分享我走過的路，避開我踩過的坑</p>
+    <figure class="about-photo">
+      <img src="about-john.jpg" alt="灰哥・個人財務顧問" width="272" height="408" loading="lazy">
+    </figure>
+    <ul class="about-list">
+      <li><b>服務業出身</b>：百貨零售 7 年，從月薪 30K 的櫃哥做到管理 6 家門市的區經理。最懂「薪水追不上目標」是什麼感覺</li>
+      <li>持有<b>理財規劃專業人員證照</b></li>
+      <li><b>一對一陪跑超過 50 位學員</b>，累積資產、還清負債</li>
+      <li><b>不賣金融商品，不推銷保單基金</b>，只做立場中立的陪跑諮詢</li>
+    </ul>
+    <div class="clear"></div>
+  </div>
+</section>
+
+<!-- ============ 10. 誰不適合 ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">報名前先確認</div>
+    <h2>誰「不適合」參加？</h2>
+    <div class="rule"></div>
+    <p class="lede">這個計畫不是給所有人的。以下情況，請先不要報名</p>
+    <div class="nofit">
+      <div class="nofit-item"><i>✕</i><div><h3>想快速致富、期待三個月就看到報酬的人</h3><p>三個月是把習慣和方法裝備上去，但還不到收成的時間</p></div></div>
+      <div class="nofit-item"><i>✕</i><div><h3>完全不打算改變現有習慣的人</h3><p>我們無法使用相同方法，卻期待得到不同結果</p></div></div>
+      <div class="nofit-item"><i>✕</i><div><h3>已經有穩定投資紀律的人</h3><p>這個服務對你太淺</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. 定價 ============ -->
+<section class="sec-alt" id="pricing">
+  <div class="wrap">
+    <div class="eyebrow">方案與費用</div>
+    <h2>給自己三個月，把錢弄懂</h2>
+    <div class="rule"></div>
+    <div class="price">
+      <div class="label">三個月理財陪跑</div>
+      <div class="amount">NT$8,000</div>
+    </div>
+    <div class="includes">
+      <div class="inc-title">方案包含</div>
+      <ul>
+        <li>三次一對一諮詢（各一小時）</li>
+        <li>《財務全貌表》</li>
+        <li>資產負債診斷</li>
+        <li>三個月無限次 LINE 問答</li>
+      </ul>
+    </div>
+    <div class="guarantee">
+      <h3>退費保證</h3>
+      <p>第一次諮詢結束後，如果你覺得這個服務不適合你，<br><b>全額退費。</b></p>
+      <p class="soft">不用解釋理由，也不用覺得不好意思。</p>
+    </div>
+    <p class="closing-line">先讓行動發生，<br>再回頭把帳算清楚。</p>
+  </div>
+</section>
+
+<!-- ============ 12. FAQ ============ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">FAQ</div>
+    <h2>常見問題</h2>
+    <div class="rule"></div>
+
+    <details open>
+      <summary><span class="qn">Q1</span>我每個月存不到錢，這樣也可以參加嗎？</summary>
+      <div class="a">可以，而且這正是這個服務要解決的問題。我不會要求你先存到多少才准開始——第一次見面，我只會請你說出一個「確定做得到」的金額，1,000 元也可以。<b>這就是我說的「先跑再算」。</b></div>
+    </details>
+
+    <details>
+      <summary><span class="qn">Q2</span>我完全不懂投資，聽得懂嗎？</summary>
+      <div class="a">聽得懂。三個月裡我們不會談任何複雜的操作，只做三件事：讓扣款開始、把錢流搞清楚、把資產負債攤開。有學員的原話是「小白友善，對觀念的建立非常有幫助」。</div>
+    </details>
+
+    <details>
+      <summary><span class="qn">Q3</span>我的收入很不穩定，網路上那些方法我都用不了。</summary>
+      <div class="a">我知道。六個罐子、631 法則那類方法都必須要全盤記帳才好執行，但很多人死在記帳這一關。我的做法是先設一個<b>一定能執行的金額</b>，剩下的再去規劃其他預算。重點是讓行動先開始。</div>
+    </details>
+
+    <details>
+      <summary><span class="qn">Q4</span>三個月會不會太短？</summary>
+      <div class="a">三個月不是要把你變成投資高手，是要把兩件事裝到你身上：「養成定期定額習慣」、「掌握自身財務全貌」。這兩件事三個月結束後，你也能自己走下去。</div>
+    </details>
+
+    <details>
+      <summary><span class="qn">Q5</span>只有三次諮詢，8,000 元會不會太貴？</summary>
+      <div class="a">
+        <p>我理解。先講一個我自己整理資料時看到的事——</p>
+        <p>我訪談過的人裡面，<b>有人花十幾萬上房地產課、有人在期貨和虛擬貨幣賠掉數十萬。</b>上課當下能量都很高，但回到現實之後，多數人<b>沒有任何一件事真的發生</b>。</p>
+        <p>8,000 元買的不是三小時的知識，是三個月裡<b>真的有人盯著你</b>——中間你隨時可以 LINE 我，不限次數。而且第一次諮詢結束你就會有一筆真的在扣的投資，跟一份開始記錄的表。</p>
+        <p>如果第一次結束你覺得不值得，全額退費。</p>
+      </div>
+    </details>
+
+    <details>
+      <summary><span class="qn">Q6</span>你會推銷保單或基金嗎？</summary>
+      <div class="a">不會。我不賣任何金融商品，也沒有轉介佣金。我的收入來源只有諮詢費，我不會推不適合你的產品。第三個月看你的保單，也只是看它在你整體財務裡合不合理，不是要你換一張。</div>
+    </details>
+
+    <details>
+      <summary><span class="qn">Q7</span>三個月結束後呢？</summary>
+      <div class="a">
+        <p>恭喜你畢業了，我不會綁著你。你會養成投資習慣、並依照預算執行，時間就會幫你把資產累積。而且你手上會有一份自己看得懂的《財務全貌表》，那是你接下來每一年都還在用的工具。</p>
+        <p>如果之後你覺得速度不夠快、想要加速，我還有一套進階的做法叫「<b>槓桿接力法</b>」——用低利負債，把未來的錢提早變成今天的本金，讓複利提早開始。</p>
+        <p>但那個方法有風險，也有門檻。你要先做到兩件事：<b>定期定額連續滿 6 個月不中斷</b>、<b>緊急預備金到位</b>。</p>
+        <p><b>到那時候有興趣再來找我就好。</b></p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <span class="brand">灰哥｜理財陪跑教練</span>
+    <p>三個月理財陪跑<br>本頁內容為財務教育與陪跑服務說明，不構成投資建議。投資有風險，過往績效不代表未來表現。</p>
+  </div>
+</footer>
+
+</body>
+</html>
