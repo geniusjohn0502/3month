@@ -1,7 +1,7 @@
 # 三個月理財陪跑（NT$8,000）銷售頁
 
 - **對外網址**：https://3month.morechoice.net（舊網址 `geniusjohn0502.github.io/plan-2028/3month/` 會自動跳到這裡）
-- **本機資料夾**：私有知識庫裡的 `100_Todo/projects/2026-08-03_三個月陪跑網頁/`（2026-10-15 從 `~/Documents/3month` 搬進去；知識庫用 .gitignore 排除它，版本由這個專案自己管）
+- **本機資料夾**：`~/Documents/網頁與程式/三個月陪跑網頁`
 - **在漏斗的位置**：Threads 導流 → 免費諮詢（consult.morechoice.net）→ 諮詢中提案 → **這一頁**（聊過之後給對方看）
 
 2026-10-14 從 `plan-2028/3month/` 搬出來獨立成一個專案，外觀改成跟免費諮詢頁、桌遊報名頁同一套（米白底、苔綠＋陶土色、明體標題）。**改配色請三頁一起改。**
@@ -19,7 +19,7 @@ CNAME           自訂網域，不要刪
 ## 改版
 
 ```bash
-cd ~/"Documents/John agent/100_Todo/projects/2026-08-03_三個月陪跑網頁"
+cd ~/Documents/網頁與程式/三個月陪跑網頁
 git add <改過的檔案> && git commit -m "說明" && git push
 # GitHub Pages 約 1 分鐘後生效
 ```
